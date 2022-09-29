@@ -1,0 +1,201 @@
+.active {
+    text-decoration: none;
+    color: red;
+    display: flex;
+  }
+  
+  .default {
+    text-decoration: none;
+    color: grey;
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* width: 100%; */
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    height: 70px;
+    font-family:sans-serif;
+    color:#000000;
+ 
+}
+.first{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.first>div{
+   width: 260px;
+   height: 290px;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.first>div:hover{
+  width: 264px;
+  height: 294px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.first>div>img{
+  margin-top: 20px;
+}
+.first>div>h4{
+  font-weight:500;
+
+
+}
+.first>div>p{
+  color: grey;
+}
+.second{
+  margin-top: 30px;
+  width: 100%;
+  height: 250px;
+  background-color: #F8F9FA;
+  display: flex;
+  justify-content: center;
+}
+.second>div>img{
+  width: 400px;
+}
+.second>div{
+  width: 40%;
+  margin-top: 40px;
+}
+.second>div>button{
+  width: 200px;
+  height: 50px;
+  margin-right: 250px;
+  border: 2px solid rgb(73,148,235);
+  font-size: 20px;
+  border-radius: 5px;
+}
+.second>div>button:hover{
+  background-color: rgb(73,148,235);
+  color: #F8F9FA;
+  border-radius: 5px;
+}
+.footer{
+  display: flex;
+  justify-content: space-around;
+}
+.footer>div{
+  display: flex;
+  gap: 10px;
+  color: grey;
+}
+.footer>div>select{
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+}
+.footer>div>img{
+  height: 50px;
+  width: 500px;
+}
+.bottom{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+  gap: 10px;
+}
+.bottom>p{
+  color: grey;
+}
+.bottom>img{
+  width: 30px;
+  height: 30px;
+  margin-top: 13px;
+}
+.regi_1>h1{
+  margin-right: 500px;
+  font-size: 50px;
+  color: RGB(60, 64, 67);
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 150px;
+}
+.regi_1>p{
+  margin-top: -20px;
+  margin-right: 500px;
+  font-size: 20px;
+  color: grey;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 150px;
+}
+.regi_2>div{
+  margin: auto;
+}
+.regi_2{
+  margin-top: 100px;
+  width: 100%;
+  height: 600px;
+  background-color: rgb(248,249,250);
+}
+
+.regi_2>div>div{
+  width: 50%;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  background-color: aliceblue;
+  margin: auto;
+  padding-top: -50px;
+}
+.regi_2>div~div{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;  
+  margin-top: 30px;
+}
+.regi_2>div~div>button{
+  width: 140px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(25,101,206);
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.regi_2>div>div>div{
+  width: 250px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 70px;
+  margin-left: 90px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.regi_2>div>div>div~div{
+   width: 500px;
+   height: 200px;
+   display: flex;
+   justify-content: flex-start;
+   box-shadow: none;
+}
+
+.regi_2>div>div>div>img{
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+}
+.regi_2>div>div>div>p{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: grey;
+}
+.regi_2>div>div>p{
+  margin-left: -250px;
+  font-size: 19px;
+  color: grey;
+}
+.regi_2>div>div>p~p{
+  font-size: 13px;
+  margin-top: -50px;
+  margin-right: -139px;
+}
+
+
