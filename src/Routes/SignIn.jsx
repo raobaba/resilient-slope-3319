@@ -7,10 +7,25 @@ import {
   FormLabel,
   FormHelperText,
   Input
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
+import {useState} from "react";
+const init = {
+  email:"",
+  password:""
+}
 const SignIn = () => {
+   const [form,setForm] = useState(init);
+   const [user,setUser] = useState([]);
+   const handleChange = (e) => {
+    const { value, name } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+  const handleSubmit = () => {
+    setUser([...user, form]);
+  };
   return (
     <>
+     
     <div>
       <div className={styles.regi_1}>
         <h1>Sign In</h1>
@@ -27,11 +42,11 @@ const SignIn = () => {
               <div>
               <FormControl>
                 <FormLabel color='grey'>Email address</FormLabel>
-                <Input h={30} w={400} borderTop='none' borderLeft='none' borderRight='none' type='email' placeholder='Enter Your Email' />
+                <Input name='email' onChange={handleChange} type='email' h={30} w={400} borderTop='none' borderLeft='none' borderRight='none' placeholder='Enter Your Email' />
                 <FormHelperText color='grey' ml={-199}>We'll never share your email.</FormHelperText>
                 <br />
                 <FormLabel color='grey'>Choose a Password </FormLabel>
-                <Input h={30} w={400} borderTop='none' borderLeft='none' borderRight='none' type='password' placeholder='Enter Your Password' />
+                <Input name='password' onChange={handleChange} type='password' h={30} w={400} borderTop='none' borderLeft='none' borderRight='none' placeholder='Enter Your Password' />
               </FormControl>
               </div>
 
@@ -39,8 +54,8 @@ const SignIn = () => {
           
         </div>
         <div>
-          <p><Link style={{textDecoration:"none",fontSize:"22px",color:"1965CE"}} to='/signin'>Forgoton Password</Link> </p>
-          <button>Sign In</button>
+          <Link style={{textDecoration:"none",fontSize:"22px",color:"1965CE"}} to='/signin'>Forgoton Password</Link> 
+          <button onClick={handleSubmit}>Sign In</button>
         </div>
         <hr style={{width:"50%"}} />
         <p style={{marginLeft:"-460px"}}>Need an account ?<Link to='/register'>Sign up here</Link> </p>
