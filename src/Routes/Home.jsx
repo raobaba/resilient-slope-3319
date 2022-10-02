@@ -1,6 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import styles from '../Components/Navbar.module.css';
 import Footer from './Footer';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container,
   Center,
@@ -17,18 +19,24 @@ import { Container,
 } from '@chakra-ui/react'
 
 const Home = () => {
+  function useDocumentTitle() {
+    useEffect(() => {
+      document.title = "Learn Digital Skills With Free Training: Google Digital Garage";
+    });
+  }
+  useDocumentTitle();
   return (
     <Container>
       <Center>
          <Box>
-          <Text fontSize="50px" mr={20} >Learn the skills of <br /> the future</Text>
+          <Text mt={90} fontSize="50px" mr={20} >Learn the skills of <br /> the future</Text>
           <Text color="grey" mt={-30} ml={-40} >Accelerate your career or business with an online <br /> digital skills course in everything from marketing <br /> to coding and beyond.</Text>
          </Box>
          <Box >
-             <Image mt='100px' width="400px" height="250px"  src="https://www.comtectranslations.co.uk/wp-content/uploads/2019/04/7-steps-to-reduce-the-complexity-of-your-website-translation-project-1-1024x832.jpg"  />
+             <Image mt='150px' width="400px" height="250px"  src="https://www.comtectranslations.co.uk/wp-content/uploads/2019/04/7-steps-to-reduce-the-complexity-of-your-website-translation-project-1-1024x832.jpg"  />
          </Box>
       </Center>
-      <Button bg="#174EA6" ml={-600} h={45} w={200} cursor="pointer" borderRadius={4} color="white" fontSize='18px'>Find Your Course</Button>
+      <Button  ml={-600} h={45} w={200} cursor="pointer" borderRadius={4}  fontSize='18px'><Link to='/onlinecourses' color='white'>Find Your Course</Link></Button>
       <Box bg="#FBFBFC" w='100%' h='150px' >
       <Text mt={50} ml={-340}>We provide courses along with leading institutions and companies</Text>
       <Stack direction='row' gap="30px">

@@ -15,10 +15,17 @@
     /* width: 100%; */
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    height: 70px;
+    height: 60px;
+    width: 100%;
     font-family:sans-serif;
     color:#000000;
- 
+    position: fixed;
+    overflow: hidden;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .first{
   display: flex;
@@ -113,6 +120,7 @@
   display: flex;
   justify-content: flex-start;
   margin-left: 150px;
+  margin-top: 80px;
 }
 .regi_1>p{
   margin-top: -20px;
@@ -202,6 +210,7 @@
   height: 200px;
   margin-left: 50px;
   background-color: rgb(255,255,255);
+  margin-top: 90px;
 }
 .online_1>h1{
  text-align: left;
@@ -224,14 +233,16 @@
 }
 .online_2>div{
   width: 20%;
-  height: 3800px;
+  height: 2000px;
   margin-top: 50px;
 }
 .online_2>div~div{
   width: 60%;
-  height: 3800px;
+  height: 2000px;
   margin-top: 50px;
+  overflow: scroll;
 }
+
 .online_3{
   width: 95%;
   margin: auto;
@@ -256,7 +267,7 @@
 }
 .map{
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 380px 380px;
   gap: 10px;
 }
 .map>div{

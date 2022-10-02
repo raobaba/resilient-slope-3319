@@ -13,7 +13,7 @@ const init = {
   email:"",
   password:""
 }
-const SignIn = () => {
+const SignIn = (props) => {
    const [form,setForm] = useState(init);
    const [user,setUser] = useState([]);
    const handleChange = (e) => {
@@ -25,7 +25,6 @@ const SignIn = () => {
   };
   return (
     <>
-     
     <div>
       <div className={styles.regi_1}>
         <h1>Sign In</h1>

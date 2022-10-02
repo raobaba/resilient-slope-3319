@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const getData = async (page) => {
   try {
     let res = await fetch(
-      `https://learn-with-google-garage-back.herokuapp.com/api/data?_limit=10&_page=${page}`
+      `https://learn-with-google-garage-back.herokuapp.com/api/data`
     );
     let data = await res.json();
     return data;
@@ -16,10 +16,10 @@ const getData = async (page) => {
 };
 const OnlineCourses = () => {
   const [data, setData] = useState([]);
-  const [page,setPage] = useState(1)
+  // const [page,setPage] = useState(1)
   useEffect(() => {
-    fetchAndUpdateData(page);
-  }, [page]);
+    fetchAndUpdateData();
+  });
 
   const fetchAndUpdateData = async (page=1) => {
     try {
@@ -29,9 +29,9 @@ const OnlineCourses = () => {
       console.log(err);
     }
   };
-  const handlePageChange = (changeBy) => {
-    setPage(page + changeBy);
-  };
+  // const handlePageChange = (changeBy) => {
+  //   setPage(page + changeBy);
+  // };
   console.log(data);
   return (
     <div>
@@ -210,12 +210,7 @@ const OnlineCourses = () => {
 
               </div>
              ))}
-            </div> <br /> <br />
-            <button disabled={page === 1} onClick={() => handlePageChange(-1)}>
-              PREV
-            </button>
-            <button>{page}</button>
-            <button disabled={page === 10} onClick={() => handlePageChange(1)}>NEXT</button>
+            </div> 
           </div>
       </div>
       <Footer />
